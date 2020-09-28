@@ -90,7 +90,7 @@ header, footer, section, article, aside, nav, address{ display:block; margin:0} 
 /* Class:Slider */
 .slider{width:100%;position:relative;overflow:hidden;z-index:0}
 .slider .slider-container{box-sizing:border-box;position:relative}
-.slider .slider-slide{box-sizing:border-box;position:relative;font-size:10px;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}
+.slider .slider-slide{box-sizing:border-box;position:relative;font-size:10px}
 
 .slider.slider-v2 .slider-container{margin:0 -25px}
 .slider.slider-v2 .slider-slide{padding:0 25px;height:100%}
