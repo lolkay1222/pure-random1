@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website">
+
+    <!-- 썸네일 게시판이 아닐때 -->
+    <meta property="og:image" content="common/img/thum.png"/>
+
+    <!-- 썸네일 게시판이 아닐때 -->
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <link rel="canonical" href=""/>
+    <link rel="shortcut icon" href="common/logo.ico"/>
+
+    <!----------------------------------------::::PACKAGES::::---------------------------------------->
+    <!-- Jquery -->
+    <script src="common/js/jquery-1.11.3.min.js"></script>
+    <script src="common/js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="common/js/jquery.easing.1.3.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" media="all" href="common/css/swiper.css">
+    <script src="common/js/swiper.js"></script>
+
+    <!-- MathJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.0.0/math.js"></script>
+
+    <!----------------------------------------::::SET-UP::::---------------------------------------->
+    <link rel="stylesheet" media="all" href="common/css/common.css">
+    <?php if($page_index=='main'){ ?><!-- 메인일때 -->
+        <link rel="stylesheet" media="all" href="common/css/main.css">
+    <?php }else{ ?><!-- 메인이 아닐때 -->
+        <link rel="stylesheet" media="all" href="common/css/sub.css">
+    <?php }?>
+    <script src="common/js/common.js"></script>
+</head>
+<body>
+    <div id="viewport" class="main">
+        
+        <!-- HEADER -->
+        <div id="header">        
+            <div class="header-container">
+                <div class="header-panel top">
+                </div>
+                <div class="header-panel bottom">
+                    <div class="size-contain">
+                        <div class="table structure">
+                            <div class="table-td align-middle align-left logo">
+                                <a href="index.php">
+                                    <img src="common/img/common/logo_w.png" class="theme-transparent" />
+                                    <img src="common/img/common/logo_d.png" class="theme-white" />
+                                </a>
+                            </div>
+                            <div class="table-td align-middle align-right menu" id="gnb">
+                                <a href="#" class="btn btn-gnb mobile"></a>
+                                <div class="gnb-container">
+                                    <div class="table gnb-structure">
+                                        <div class="table-tr gnb-header mobile">
+                                            <div class="table-td">
+                                                <div class="table size-full">
+                                                    <div class="table-td align-middle align-left">
+                                                        <a href="#" class="btn btn-gnb mobile active"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-tr gnb-content">
+                                            <div class="table-td">
+                                                <div class="table list">
+            
+                                                    <!-- Menu-Sub -->
+                                                    <div class="table-td align-middle align-center menu-sub active">
+                                                        <a href="#" class="menu-btn">Home</a>
+                                                    </div>
+            
+                                                    <!-- Menu-Sub -->
+                                                    <div class="table-td align-middle align-center menu-sub">
+                                                        <a href="#" class="menu-btn">Eras</a>
+                                                        <div class="menu-list">
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">1920s</a>
+                                                            </div>
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">1930s</a>
+                                                            </div>
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">1940s</a>
+                                                            </div>
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">1950s</a>
+                                                            </div>
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">1960s</a>
+                                                            </div>
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">1970s</a>
+                                                            </div>
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">1980s</a>
+                                                            </div>
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">1990s</a>
+                                                            </div>
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">2000s</a>
+                                                            </div>
+            
+                                                            <!-- Menu-Sub -->
+                                                            <div class="menu-sub">
+                                                                <a href="#" class="menu-btn">2010s</a>
+                                                            </div>
+            
+                                                        </div>
+                                                    </div>
+            
+                                                    <!-- Menu-Sub -->
+                                                    <div class="table-td align-middle align-center menu-sub">
+                                                        <a href="#" class="menu-btn popup-open" popup-connect="1">Pop-Up</a>
+                                                    </div>
+            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gnb-mask mobile"></div>
+        </div>
+        <!-- //HEADER -->
+        
+        <!-- CONTENT -->
+        <div id="content">
+
+            <div class="content-panel intro">
+                <div class="slider slider-v1">
+                   <div class="swiper-container slider-container">
+                        <div class="swiper-wrapper slider-wrapper">
+
+                            <!-- Slide -->
+                            <div class="swiper-slide slider-slide">
+                                <div class="block block-slide1">
+                                    <div class="block-layer"></div>
+                                    <img src="common/img/main/1920.png" class="block-background" />
+                                </div>
+                            </div>
+
+                            <!-- Slide -->
+                            <div class="swiper-slide slider-slide">
+                                <div class="block block-slide1">
+                                    <div class="block-layer"></div>
+                                    <img src="common/img/main/1930.png" class="block-background" />
+                                </div>
+                            </div>
+
+                            <!-- Slide -->
+                            <div class="swiper-slide slider-slide">
+                                <div class="block block-slide1">
+                                    <div class="block-layer"></div>
+                                    <img src="common/img/main/1940.png" class="block-background" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-scrolltop"></a>
+            
+            <div class="space space-v1"></div>
+
+            <div class="content-panel">
+                <div class="title title-v1">
+                    <div class="title-name">PANEL 1</div>
+                    <div class="title-desc">ABCDEFGJKI</div>
+                </div>
+                <div class="size-contain">
+                    <div class="slider slider-v2">
+                        <div class="swiper-container slider-container">
+                            <div class="swiper-wrapper slider-wrapper">
+
+                                <!-- Slide -->
+                                <div class="swiper-slide slider-slide">
+                                    <div class="img img-auto">
+                                        <img src="common/img/main/1920.png" class="block-background" />
+                                    </div>
+                                </div>
+
+                                <!-- Slide -->
+                                <div class="swiper-slide slider-slide">
+                                    <div class="img img-auto">
+                                        <img src="common/img/main/1930.png" class="block-background" />
+                                    </div>
+                                </div>
+
+                                <!-- Slide -->
+                                <div class="swiper-slide slider-slide">
+                                    <div class="img img-auto">
+                                        <img src="common/img/main/1940.png" class="block-background" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space space-v1"></div>
+
+            <div class="content-panel">
+                <div class="title title-v1">
+                    <div class="title-name">PANEL 2</div>
+                    <div class="title-desc">ABCDEFGJKI</div>
+                </div>
+                <div class="size-contain">
+                    <style>
+                        .tab.tab-v1 .tab-header .table{table-layout:fixed}
+                        .tab.tab-v1 .tab-header .btn{font-size:18px;color:#fff;font-weight:600;padding:10px 12px;box-sizing:border-box;background-color:#000;border:solid #000;border-width:1px 1px 0 1px}
+                        .tab.tab-v1 .tab-header .btn.active{background:#fff;color:#000}
+                        .tab.tab-v1 .tab-content{border:solid #000;border-width:0 1px 3px 1px;padding:30px}
+                        .tab.tab-v1 .tab-content .frame{display:none;font-size:16px}
+                        .tab.tab-v1 .tab-content .frame.active{display:block}
+                    </style>
+                    <div class="tab tab-v1">
+                        <div class="tab-header">
+                            <div class="table">
+                                <a href="#" class="table-td btn active"><div class="ellipsis align-center">Tab 1</div></a>
+                                <a href="#" class="table-td btn"><div class="ellipsis align-center">Tab 2</div></a>
+                                <a href="#" class="table-td btn"><div class="ellipsis align-center">Tab 3</div></a>
+                            </table>
+                        </div>
+                        <div class="tab-content">
+                            <div class="frame active">
+                                ABC
+                            </div>
+                            <div class="frame">
+                                DEF
+                            </div>
+                            <div class="frame">
+                                GHI
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space space-v1"></div>
+
+            <div class="content-panel">
+                <div class="title title-v1">
+                    <div class="title-name">PANEL 3</div>
+                    <div class="title-desc">ABCDEFGJKI</div>
+                </div>
+                <div class="size-contain">
+                    <style>
+                        .card.card-v1 .card-containter{margin:-15px;font-size:0}
+                        .card.card-v1 .card-section{box-sizing:border-box;padding:15px;width:33.333%;display:inline-block;vertical-align:top}
+                        .card.card-v1 .card-section>.container{background:#fff;border:1px solid #000;border-width:1px 1px 3px 1px;box-sizing:border-box}
+                        .card.card-v1 .card-section>.container .thumbnail{width:100%}
+                        .card.card-v1 .card-section>.container .info .name{font-size:24px;color:#000;padding:20px 20px 5px 20px;box-sizing:border-box}
+                        .card.card-v1 .card-section>.container .info .desc{font-size:14px;color:#999;padding:0 20px 20px 20px;box-sizing:border-box}
+
+                        @media screen and (max-width:1200px){
+                            .card.card-v1 .card-containter{margin:-15px}
+                            .card.card-v1 .card-section{padding:15px;width:50%}
+                            .card.card-v1 .card-section>.container{border-width:1px 1px 3px 1px}
+                            .card.card-v1 .card-section>.container .info .name{font-size:24px;padding:20px 20px 5px 20px}
+                            .card.card-v1 .card-section>.container .info .desc{font-size:14px;padding:0 20px 20px 20px}
+                        }
+                        @media screen and (max-width:720px){
+                            .card.card-v1 .card-containter{margin:-10px}
+                            .card.card-v1 .card-section{padding:10px;width:100%}
+                            .card.card-v1 .card-section>.container{border-width:1px 1px 3px 1px}
+                            .card.card-v1 .card-section>.container .info .name{font-size:18px;padding:15px 15px 2px 15px}
+                            .card.card-v1 .card-section>.container .info .desc{font-size:14px;padding:0 15px 15px 15px}
+                        }
+                    </style>
+                    
+                    <div class="card card-v1">
+                        <div class="card-containter">
+                            <div class="card-section">
+                                <div class="container">
+                                    <img src="common/img/main/1920.png" class="thumbnail" />
+                                    <div class="info">
+                                        <div class="name">Product 1</div>
+                                        <div class="desc">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-section">
+                                <div class="container">
+                                    <img src="common/img/main/1930.png" class="thumbnail" />
+                                    <div class="info">
+                                        <div class="name">Product 2</div>
+                                        <div class="desc">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-section">
+                                <div class="container">
+                                    <img src="common/img/main/1940.png" class="thumbnail" />
+                                    <div class="info">
+                                        <div class="name">Product 3</div>
+                                        <div class="desc">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-section">
+                                <div class="container">
+                                    <img src="common/img/main/1920.png" class="thumbnail" />
+                                    <div class="info">
+                                        <div class="name">Product 1</div>
+                                        <div class="desc">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-section">
+                                <div class="container">
+                                    <img src="common/img/main/1930.png" class="thumbnail" />
+                                    <div class="info">
+                                        <div class="name">Product 2</div>
+                                        <div class="desc">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-section">
+                                <div class="container">
+                                    <img src="common/img/main/1940.png" class="thumbnail" />
+                                    <div class="info">
+                                        <div class="name">Product 3</div>
+                                        <div class="desc">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-section">
+                                <div class="container">
+                                    <img src="common/img/main/1920.png" class="thumbnail" />
+                                    <div class="info">
+                                        <div class="name">Product 1</div>
+                                        <div class="desc">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-section">
+                                <div class="container">
+                                    <img src="common/img/main/1930.png" class="thumbnail" />
+                                    <div class="info">
+                                        <div class="name">Product 2</div>
+                                        <div class="desc">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-section">
+                                <div class="container">
+                                    <img src="common/img/main/1940.png" class="thumbnail" />
+                                    <div class="info">
+                                        <div class="name">Product 3</div>
+                                        <div class="desc">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="space space-v1"></div>
+
+            <div class="content-panel">
+                <div class="block block-list1">
+                    <div class="size-contain">
+                        <div class="block-container">
+                            <div class="table table-v2">
+                                <a href="#" class="table-td align-middle align-center block-el"><span class="block-el-bf"></span>ABC<span class="block-el-at"></span></a>
+                                <a href="#" class="table-td align-middle align-center block-el"><span class="block-el-bf"></span>ABC<span class="block-el-at"></span></a>
+                                <a href="#" class="table-td align-middle align-center block-el"><span class="block-el-bf"></span>ABC<span class="block-el-at"></span></a>
+                                <a href="#" class="table-td align-middle align-center block-el"><span class="block-el-bf"></span>ABC<span class="block-el-at"></span></a>
+                                <a href="#" class="table-td align-middle align-center block-el"><span class="block-el-bf"></span>ABC<span class="block-el-at"></span></a>
+                                <a href="#" class="table-td align-middle align-center block-el"><span class="block-el-bf"></span>ABC<span class="block-el-at"></span></a>
+                                <a href="#" class="table-td align-middle align-center block-el"><span class="block-el-bf"></span>ABC<span class="block-el-at"></span></a>
+                                <a href="#" class="table-td align-middle align-center block-el"><span class="block-el-bf"></span>ABC<span class="block-el-at"></span></a>
+                                <a href="#" class="table-td align-middle align-center block-el"><span class="block-el-bf"></span>ABC<span class="block-el-at"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-general1">
+                    <div class="size-contain">
+                        <div class="slider slider-v3">
+                            <div class="table size-fullwidth">
+                                <div class="table-td align-left align-middle slider-static">
+                                    ABCDEFGJKI
+                                </div>
+                                <div class="table-td align-left align-middle slider-dynamic">
+                                    <div class="swiper-container slider-container">
+                                        <div class="swiper-wrapper slider-wrapper">
+
+                                            <!-- Slide -->
+                                            <div class="swiper-slide slider-slide">
+                                                <div class="block block-text1">
+                                                    <div class="table block-container">
+                                                         <div class="table-td align-left align-middle block-wrapper">
+                                                            <div class="ellipsis block-txt">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Slide -->
+                                            <div class="swiper-slide slider-slide">
+                                                <div class="block block-text1">
+                                                    <div class="table block-container">
+                                                         <div class="table-td align-left align-middle block-wrapper">
+                                                            <div class="ellipsis block-txt">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Slide -->
+                                            <div class="swiper-slide slider-slide">
+                                                <div class="block block-text1">
+                                                    <div class="table block-container">
+                                                         <div class="table-td align-left align-middle block-wrapper">
+                                                            <div class="ellipsis block-txt">ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI ABCDEFGJKI</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer">  
+            <div class="footer-container">
+                <div class="footer-panel top">
+                    @DO DUC QUANG.
+                </div>
+            </div>
+        </div>
+        <!-- //FOOTER -->
+
+	</div>  
+</body>
+</html>
+
+<div class="popup-mask popup-close"></div>
+<div class="popup" popup-connect="1">
+    <div class="popup-position-horizontal">
+        <div class="popup-position-vertical">
+            <div class="popup-container">
+                <div class="popup-header">
+                    <div class="table">
+                        <div class="table-td align-middle align-left popup-header-title">
+                            <span class="ellipsis">Pop-Up 1</span>
+                        </div>
+                        <div class="table-td align-middle align-right popup-header-button">
+                            <a href="#" class="btn btn-close popup-close"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-content">
+                    <div style="height:1000px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
